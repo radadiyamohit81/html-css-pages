@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is java Script program.</title>
+    <script type="text/javascript">
+    	function leapyear() {
+    		// body...
+    		year = window.prompt("Input a Year : ");
+			x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+			if(x){
+				document.write("this is leap year");
+			}
+			else
+			{
+				document.write("this is not a leap year");
+			}
+			console.log(x);
+    	}
+    </script>
+</head>
+<body>
+ <input type="button" onclick="leapyear()" value="Say Hello" />
+</body>
+</html>
