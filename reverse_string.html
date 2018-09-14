@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is java Script program.</title>
+    <script type="text/javascript">
+    	
+		function myFunction()
+		{
+			var str = document.getElementById('txtbox').value;
+			var result = checkPalindrome(str);
+			alert('The Entered String "'+str +'" is "'+result+'"');
+		}
+		function checkPalindrome(str)
+		{
+			var orignalStr;
+			str = str.toLowerCase();
+			orignalStr = str;
+			str = str.split(''); 
+			str = str.reverse();
+			str = str.join('');
+			var reverseStr = str;		
+			if(orignalStr == reverseStr)
+			{
+				return 'Palindrome'; 
+			}
+			else
+			{
+				return 'Not Palindrome';
+			}
+		}
+    </script>
+</head>
+<body>
+ <form action="http://www.tutorialsmade.com/" method="get">
+		<h3>JavaScript Palindrome Program from Tutorialsmade.com</h3>
+		<h4><a href="">Find the program here</a></h4>
+		<input type="text" id="txtbox" placeholder="Enter String" />
+		<input type="button" onclick="myFunction()" value="Check Palindrome" />
+	</form>
+</body>
+</html>
